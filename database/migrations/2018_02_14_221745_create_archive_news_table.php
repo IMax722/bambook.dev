@@ -16,7 +16,7 @@ class CreateArchiveNewsTable extends Migration
         Schema::create('archive_news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('uri')->unique();
-            $table->timestamp('upload')->index();
+            $table->timestamp('upload');
             $table->integer('views');
             $table->string('name');
             $table->text('words');

@@ -16,7 +16,7 @@ class CreateHotNewsTable extends Migration
         Schema::create('hot_news', function (Blueprint $table) {
             $table->increments('id');
             $table->string('uri')->unique();
-            $table->timestamp('upload')->index();
+            $table->timestamp('upload');
             $table->integer('views');
             $table->string('name');
             $table->text('words');
