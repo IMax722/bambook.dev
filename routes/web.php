@@ -11,7 +11,4 @@
 |
 */
 
-Route::get('hello', function () {
-    return view('hello', ['name' => 'James']);
-});
-
+Route::get('/main', '\App\Http\Controllers\Mainpagecontroller@hello');
