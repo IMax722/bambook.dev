@@ -12,3 +12,4 @@
 */
 
 Route::get('/main', '\App\Http\Controllers\Mainpagecontroller@hello');
+Route::get('/users', '\App\Http\Controllers\Mainpagecontroller@view');

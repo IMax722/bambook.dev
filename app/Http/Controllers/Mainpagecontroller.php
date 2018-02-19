@@ -7,13 +7,22 @@ use Illuminate\Http\Request;
 class Mainpagecontroller extends Controller
 {
 
-public function hello ()
+public function getname()
 {
 
-    return view('welcome');
+    $users = DB::table('users')->get();
+
+    return view ('user.index'. ['users' => $users]);
 
 }
 
+public function view()
+{
+
+    return view('hello');
+    return getname();
+
+}
 
 
 
