@@ -2,28 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class Mainpagecontroller extends Controller
 {
 
-public function getname()
-{
+    public function index()
+    {
+        $users = DB::table('users')->get();
 
-    $users = DB::table('users')->get();
-
-    return view ('user.index'. ['users' => $users]);
-
-}
-
-public function view()
-{
-
-    return view('hello');
-    return getname();
-
-}
+        return view('layouts.index', ['users' => $users]);
+    }
 
 
 
 }
+

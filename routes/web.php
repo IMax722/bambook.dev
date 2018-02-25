@@ -11,5 +11,9 @@
 |
 */
 
-Route::get('/main', '\App\Http\Controllers\Mainpagecontroller@hello');
-Route::get('/users', '\App\Http\Controllers\Mainpagecontroller@view');
+Route::get('/news', 'Mainpagecontroller@index');
+Route::get('/news/{name]', 'Mainpagecontrolr5tler@show');
+
+
+
+
