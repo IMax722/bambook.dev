@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/news', 'Mainpagecontroller@index');
-Route::get('/news/{name]', 'Mainpagecontrolr5tler@show');
+Route::get('/news', 'Newscontroller@Getpopular');
+Route::get('/news2', 'Newscontroller@index');
 
 
 

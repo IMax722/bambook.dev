@@ -4,11 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class getnews extends Model
+class News extends Model
 {
-    
-
-protected $table = '';
-
-
+    protected static $table = 'news';
 }
