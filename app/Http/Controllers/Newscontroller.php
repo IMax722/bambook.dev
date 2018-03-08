@@ -10,30 +10,35 @@ use Illuminate\Support\Facades\DB;
 
 class Newscontroller extends Controller
 {
-    
+    public function index()
+    {
+        
+        return $this->Getnewest();
+        return $this->Getpopular();   
+        
+    }
     
     public function Getpopular()
     {
-        $populars = DB::table('news')->orderBy('body','requests', 'desk')->get();   
+        $populars = DB::table('news')->orderBy('requests', 'desk')->get();   
         foreach ($populars as $popular) {
             echo $popular->body;
         }
         
         
     }
-    public function index()
-    {
-        
-        return $this->Getpopular();     
-        
-    }
+    
     public function Getnewest()
     {
-        $News = DB::where('news')
+        $newests = DB::table('news')
         ->orderBy('created_at', 'desc')
         ->get();
         foreach ($newests as $newest) {
+            echo $newest->body;
+        }
+        foreach ($newests as $newest) {
             echo $newest->created_at;
+
         }
     }    
     
