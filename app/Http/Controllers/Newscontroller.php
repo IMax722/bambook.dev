@@ -6,21 +6,23 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\DB;
-
+use App\News;
 
 class Newscontroller extends Controller
 {
     public function index()
     {
-        
+                $this->Getpopular();
         return $this->Getnewest();
-        return $this->Getpopular();   
+                 
         
     }
     
     public function Getpopular()
     {
-        $populars = DB::table('news')->orderBy('requests', 'desk')->get();   
+        $populars = News::where('body','requests')
+        ->orderBy('requests', 'desk')
+        ->get();   
         foreach ($populars as $popular) {
             echo $popular->body;
         }
@@ -30,7 +32,7 @@ class Newscontroller extends Controller
     
     public function Getnewest()
     {
-        $newests = DB::table('news')
+        $newests = News::where('body','created_at')
         ->orderBy('created_at', 'desc')
         ->get();
         foreach ($newests as $newest) {
