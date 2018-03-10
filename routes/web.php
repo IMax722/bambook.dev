@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/news', 'Newscontroller@Getpopular');
-Route::get('/news2', 'Newscontroller@index');
+Route::get('/news', 'Newscontroller@index');
+Route::get('/news/{id}','Newscontroller@Getnewsid');
 
 
 

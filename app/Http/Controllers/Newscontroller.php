@@ -20,11 +20,14 @@ class Newscontroller extends Controller
     
     public function Getpopular()
     {
-        $populars = News::where('body','requests')
-        ->orderBy('requests', 'desk')
-        ->get();   
+        $populars = News::select()
+        ->orderby('requests','desk')
+        ->get();
         foreach ($populars as $popular) {
             echo $popular->body;
+        }
+        foreach ($populars as $popular) {
+            echo $popular->created_at;
         }
         
         
@@ -32,7 +35,7 @@ class Newscontroller extends Controller
     
     public function Getnewest()
     {
-        $newests = News::where('body','created_at')
+        $newests = News::select()
         ->orderBy('created_at', 'desc')
         ->get();
         foreach ($newests as $newest) {
@@ -44,23 +47,17 @@ class Newscontroller extends Controller
         }
     }    
     
-    
-    
-    //protected function getList(string $orderField,
-    //string $orderPosition = 'DESC') {
-        //  return $this->orderBy(
-            //    $orderField, 
-            //  $orderPosition);
-            //}
-            
-            // public function getNew() { 
-                // return $this->getList('upload_date', 'DESC','body'); 
-                // }
-                // public function getPopular() {
-                    //return $this->getList('views', 'DESC','body');
-                    // }
+    public function Getnewsid()
+    {
+        $newsid = News::where('id')
+        ->get();
+        echo $newsid;
+        if(!$newsid == null){
+            return response ('not found', 404);
+        else
+            return response ('')
+        }
+    }
                     
-                    
-                    
-                }
+    }
             
