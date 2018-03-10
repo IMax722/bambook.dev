@@ -10,8 +10,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <body>
-        @foreach ($users as $user)
-        <p>This is user {{ $user->name }}</p>
+        @foreach ($news as $new)
+        <p>This is new {{ $new->body }}</p>
         @endforeach
 
         </body>

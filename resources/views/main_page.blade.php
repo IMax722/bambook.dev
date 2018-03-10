@@ -12,7 +12,7 @@
     </head>
     <body>
 
-
+    
     @foreach ($users as $user)
     <p>This is users {{ $user->id }}</p>
     @endforeach
