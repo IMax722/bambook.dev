@@ -46,17 +46,14 @@ class Newscontroller extends Controller
 
         }
     }    
+   
     
-    public function Getnewsid()
+    public static function Getnewsid($id = 'id')
     {
-        $newsid = News::where('id')
-        ->get();
-        echo $newsid;
-        if(!$newsid == null){
-            return response ('not found', 404);
-        else
-            return response ('')
-        }
+        $newsshow = News::where('id',1)
+            ->first();
+        echo $newsshow;
+        
     }
                     
     }

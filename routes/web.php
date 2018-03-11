@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/news', 'Newscontroller@index');
-Route::get('/news/{id}','Newscontroller@Getnewsid');
+Route::get('/news', 'NewsController@index');
+Route::get('/news/{id}', function($id) {
+        return \App\News::find($id);
+});
+
+
 
 
 
