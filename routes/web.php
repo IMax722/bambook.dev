@@ -10,12 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/news/show','SearchController@index');
 Route::get('/news', 'NewsController@index');
 Route::get('/news/{id}', function($id) {
         return \App\News::find($id);
 });
-
 
 
 

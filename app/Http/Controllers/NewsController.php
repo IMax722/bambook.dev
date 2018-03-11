@@ -4,16 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Http\Controllers\NewsController;
-use Illuminate\Support\Facades\DB;
 use App\News;
 
-class Newscontroller extends Controller
+class NewsController extends Controller
 {
     public function index()
     {
-                $this->Getpopular();
         return $this->Getnewest();
+               $this->Getpopular();
                  
         
     }
