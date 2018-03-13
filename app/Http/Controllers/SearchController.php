@@ -11,7 +11,7 @@ class SearchController extends NewsController
     public function index()
     {
 
-        return view('news.tabloid');
+        return view('news.main');
 
     }
 }

@@ -10,16 +10,18 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./resources/assets/js/components//bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?t={{ time() }}" rel="stylesheet">
+    <link href="{{ asset('css/bootsrap.min.css') }}?t={{ time() }}" rel="stylesheet">
+    <link href="{{ asset('css/starter-template.css') }}?t={{ time() }}" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
-    <link href="./resources/assets/js/components/starter-template.css" rel="stylesheet"><link rel="stylesheet"  media="all">
   </head>
 
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Navbar</a>
+      <a class="navbar-brand" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Bambook</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,10 +32,10 @@
             <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Link</a>
+            <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Disabled</a>
+            <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/starter-template/#">Register</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -60,13 +62,25 @@
 
     </main><!-- /.container -->
 
+    
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="https://getbootstrap.com/docs/4.0/examples/album/#">Back to top</a>
+        </p>
+        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="https://getbootstrap.com/docs/4.0/">Visit the homepage</a> or read our <a href="https://getbootstrap.com/docs/4.0/getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./resources/assets/js/components/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/resources/assets/js/jquery-slim.min.js"><\/script>')</script>
-    <script src="./resources/assets/js/components/popper.min.js"></script>
-    <script src="./resources/assets/js/components/bootstrap.min.js"></script>
+    <script src="./public/js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/public/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="./public/js/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
   
 
 </body><div class="XTranslate"><div class="popup-content resolved"></div></div></html>
